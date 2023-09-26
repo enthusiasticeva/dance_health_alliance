@@ -1,0 +1,605 @@
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 140px auto 110px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header"
+        "body"
+        "footer";
+}
+
+
+
+html, body , .container {
+    height: 100%;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+
+}
+
+/* HEADER */
+
+header { 
+    grid-area: header;
+    width: 100vw; 
+    box-shadow: 0px 3px 3px lightgrey;
+}
+#logo {
+    height: 100px;
+}
+
+header nav .desktop {
+    font-family: 'Oswald', sans-serif;
+    color: #0066a6;
+    display: inline;
+    font-size: 25px;
+}
+
+header #desktop a:link, 
+header #desktop a:visited, 
+header #desktop a:hover, 
+header #desktop a:active, 
+#dropdown-content a:link, 
+#dropdown-content a:visited, 
+#dropdown-content a:hover, 
+#dropdown-content a:active{
+    text-decoration: none;
+}
+
+header #desktop a:hover p, 
+#dropdown-content a:hover p {
+    color: #333333;
+}
+
+/* Makes the cursor the not alowed symbol on the dead menu items */
+header #desktop > p {
+    cursor:not-allowed;
+}
+
+
+header nav .phone {
+    display: none;
+}
+
+header #desktop {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    height: 140px;
+}
+
+#dropdown-content {
+    grid-area: nav;
+    display: none;
+    overflow: scroll;
+    flex-direction: column;
+    /* height: calc(100% -250px); */
+    height: 100%;
+        /* Calculates the height of the screen - the header height */
+}
+
+#dropdown-content #about-options {
+    display: none;
+    flex-direction: column;
+}
+
+#dropdown-content #programmes-options {
+    display: none;
+    flex-direction: column;
+}
+
+
+
+#dropdown-content button {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    display: block;
+}
+
+#dropdown-content p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #0066a6;
+    border-bottom: solid 2px #e5e5e5;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-top: 15px;
+    z-index: 2;
+}
+
+#dropdown-content #about-options p , 
+#dropdown-content #programmes-options p {
+    margin-left: 50px;
+}
+/* #dropdown-content p:hover {
+    background-color: #e5e5e5;
+} */
+
+/* MAIN BODY */
+main { 
+    grid-area: body; 
+    width: 100vw;
+    /* z-index: -1; */
+    
+}
+
+
+/* FOOTER */
+footer { 
+    grid-area: footer;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+ }
+
+ footer > div {
+    display: inline;
+ }
+
+
+footer #badges-left {
+    display: flex;
+    width: 290px;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+footer #badges-left img{
+    width: 80px;
+    height: 80px;
+}
+
+footer #contact-us button {
+    width: 300px;
+    height: 56px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 200%;
+    background-color: #ee7669;
+    border: none;
+    color: #333333;
+}
+
+.copyright {
+    color: white;
+    font-size: 8pt;
+    padding-top: 5px;
+    margin: 0 0 0 0;
+    display: none;
+}
+
+footer #contact-us .copyright {
+    display: block;
+    
+}
+
+ footer #contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+} 
+
+footer #badges-right {
+    display: flex;
+    width: 280px;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+footer #badges-right img{
+    height: 60px;
+}
+
+/* ------------------------------------------------ */
+/* MAIN BODY */
+main { 
+    grid-area: body; 
+    width: 100vw;
+    display: block;
+}
+
+section {
+    width: 100vw;
+}
+
+main #welcome {
+    height: 520px;
+}
+
+main #welcome img {
+    width: 100vw;
+    height: 520px;
+    object-fit: cover;
+    background-position: 0%;
+    
+}
+
+main #welcome div {
+    width: 100vw;
+    
+    height: 100%;
+    position: absolute;
+  top: 140px;
+  left: 0;
+  /* transform: translate(-50%, -50%); */
+}
+
+main #welcome div span {
+    background-color: #0066a6;
+    opacity: 0.6;
+    width: 100%;
+    height: 520px;
+    /* z-index: 2; */
+    position: absolute;
+    overflow: hidden;
+}
+
+main #welcome div h1 {
+    opacity: 1;
+    z-index: 10;
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 40pt;
+    text-align: center;
+    margin: auto auto;
+    top: 15%;
+    width: 100%;
+    color: white;
+}
+
+main #welcome div h1 em {
+    font-style: normal;
+    font-size: 50pt;
+}
+
+main #classes-section {
+    transform: translate(0%, -130px);
+}
+
+main #classes-section #classes-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+main #classes-section .classes-col {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+main #classes-section .classes-col:hover img {
+    transform: scale(110%);
+}
+
+main #classes-section .classes-col h2 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+main #classes-section .classes-col p {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+main #classes-section button {
+    width: 410px;
+    height: 90px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 45pt;
+    background-color: #ee7669;
+    border: none;
+    color: #333333;
+    display: block;
+    margin: 30px auto;
+}
+
+main #testemonials {
+    background-color: #ecf7f6;
+    width: 100vw;
+}
+
+main #testemonials .main-gallery .gallery-cell img {
+    border-radius: 25%;
+    display: block;
+    margin: 0 auto;
+}
+
+main #testemonials .main-gallery .gallery-cell p {
+    font-style: italic;
+    text-align: center;
+    font-size: 17pt;
+    width: 900px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+main #testemonials .main-gallery .gallery-cell strong {
+    color: #0066a6;
+}
+
+main #testemonials .main-gallery {
+    width: 100%;
+    height: 500px;
+}
+main #testemonials .main-gallery .gallery-cell {
+    width: 100%;
+    padding: 15px;
+    
+}
+
+.flickity-page-dots {
+    position: relative;
+}
+
+main .image-banner {
+    height: 380px;
+}
+
+main .image-banner img {
+    width: 100vw;
+    height: 380px;
+    object-fit: cover;
+    background-position: top;
+    object-position: 0 0;
+    
+}
+
+main #covid-programmes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main #covid-programmes .shop-item {
+    box-shadow: 0px 3px 3px gray;
+    width: 370px;
+    height: 415px;
+}
+
+main #covid-programmes .shop-item:hover {
+    box-shadow: 0px 5px 5px gray;
+    /* width: 370px;
+    height: 415px; */
+}
+
+main #covid-programmes .shop-item img {
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+}
+
+main #covid-programmes h2 {
+    font-size: 40pt;
+    color: #333333;
+    text-align: center;
+
+}
+
+main #covid-programmes > img {
+}
+
+main #covid-programmes .shop-item h3 {
+    font-size: 22pt;
+    margin: 10px;
+    color: #0066a6;
+
+}
+
+main #covid-programmes .shop-item p {
+    font-size: 20pt;
+    font-family: 'Oswald', sans-serif;
+    color: #ee7669;
+    margin: 10px;
+}
+
+main #ambassador {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ecf7f6;
+    padding: 30px 0;
+    
+}
+
+main #ambassador div {
+    width: 850px;
+    font-size: 18px;
+}
+
+main #ambassador figure  img  {
+    height: 478px;
+}
+
+main #ambassador figure h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+main #ambassador figure figcaption {
+    font-size: 18px;
+}
+
+
+/* When the screen becomes phone sized, we add an extra grid area (auto sizing) 
+to hold the navigation menu that appeasr when you click on the menu button */
+@media screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 140px auto auto 250px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header"
+            "nav"
+            "body"
+            "footer";
+    }
+    
+    header nav .desktop {
+        display: none;
+    }
+
+    header nav .phone {
+        display: block;
+        font-size: 20pt;
+        color: #0066a6;
+    }
+
+    /* header nav img {
+        width: 50vw;
+        object-fit:contain;
+    } */
+
+    header nav #menu {
+        order: -1;
+        border: none;
+        background-color:transparent;
+    }
+
+    header nav #menu:hover #dropdown-content {
+        display: block;
+    }
+
+    header #desktop {
+        height: 140px;
+        width: auto;
+    }
+
+    header nav img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    
+
+    .copyright {
+        display: block;
+        margin-top: -10px;
+        text-align: center;
+        /* background-color: aqua; */
+
+    }
+
+    footer #contact-us .copyright {
+        display: none;
+    }
+
+    footer #contact-us {
+        order: -2;
+    }
+
+    footer #badges-left, footer #badges-right {
+        padding: 0;
+    }
+
+    footer #badges-right img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer #badges-right {
+        width: 40vw;
+        /* background-color: aquamarine; */
+    }
+
+    footer #badges-left{
+        padding: 5px 0;
+        width: 70vw;
+        /* background-color: azure; */
+    }
+
+    main #welcome div h1 {
+        font-size: 36px;
+    }
+
+    main #welcome div h1 em {
+        font-size: 38px;
+    }
+
+    main #welcome img, main #welcome div, main #welcome div span, main #welcome {
+        height: 265px;
+    }
+
+    main #classes-section {
+        transform: translate(0,0);
+    }
+
+    main #classes-section #classes-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #classes-section #classes-row img {
+        width: 170px;
+        height: 170px;
+        margin-top: 20px;
+    }
+
+    main #classes-section #classes-row .classes-col {
+        align-items: center;
+        width: 90vw;
+    }
+    
+    main #classes-section .classes-col p {
+        margin: 0 0px;
+    }
+
+    main #classes-section button {
+        width: 90vw;
+        font: 40px;
+    }
+
+    main #covid-programmes {
+        flex-direction: column;
+    }
+
+    main #covid-programmes .shop-item {
+        width: 90vw;
+        margin-bottom: 40px;
+    }
+
+    main #covid-programmes .shop-item img {
+        width: 90vw;
+    }
+
+    main #covid-programmes .shop-item h3 {
+        font-size: 18pt;
+    }
+
+    main #ambassador {
+        flex-direction: column;
+    }
+
+    main #ambassador div {
+        width: 90vw;
+    }
+
+    main #testemonials .main-gallery .gallery-cell p {
+        width: 90vw;
+        font-size: 12pt;
+    }
+}

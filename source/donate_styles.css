@@ -1,0 +1,661 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 140px auto 110px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header"
+        "body"
+        "footer";
+}
+
+
+
+html, body , .container {
+    height: 100%;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* HEADER */
+
+header { 
+    grid-area: header;
+    width: 100vw; 
+    box-shadow: 0px 3px 3px lightgrey;
+}
+#logo {
+    height: 100px;
+}
+
+header nav .desktop {
+    font-family: 'Oswald', sans-serif;
+    color: #0066a6;
+    display: inline;
+    font-size: 25px;
+}
+
+header #desktop a:link, 
+header #desktop a:visited, 
+header #desktop a:hover, 
+header #desktop a:active, 
+#dropdown-content a:link, 
+#dropdown-content a:visited, 
+#dropdown-content a:hover, 
+#dropdown-content a:active{
+    text-decoration: none;
+}
+
+header #desktop a:hover p, 
+#dropdown-content a:hover p {
+    color: #333333;
+}
+
+/* Makes the cursor the not alowed symbol on the dead menu items */
+header #desktop > p {
+    cursor:not-allowed;
+}
+
+header nav .phone {
+    display: none;
+}
+
+header #desktop {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    height: 140px;
+}
+
+#dropdown-content {
+    grid-area: nav;
+    display: none;
+    overflow: scroll;
+    flex-direction: column;
+    /* height: calc(100% -250px); */
+    height: 100%;
+        /* Calculates the height of the screen - the header height */
+}
+
+#dropdown-content #about-options {
+    display: none;
+    flex-direction: column;
+}
+
+#dropdown-content #programmes-options {
+    display: none;
+    flex-direction: column;
+}
+
+
+
+#dropdown-content button {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    display: block;
+}
+
+#dropdown-content p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #0066a6;
+    border-bottom: solid 2px #e5e5e5;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-top: 15px;
+    z-index: 2;
+}
+
+#dropdown-content #about-options p , 
+#dropdown-content #programmes-options p {
+    margin-left: 50px;
+}
+/* #dropdown-content p:hover {
+    background-color: #e5e5e5;
+} */
+
+/* MAIN BODY */
+main { 
+    grid-area: body; 
+    width: 100vw;
+    
+    
+}
+
+
+/* FOOTER */
+footer { 
+    grid-area: footer;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+ }
+
+ footer > div {
+    display: inline;
+ }
+
+
+footer #badges-left {
+    display: flex;
+    width: 290px;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+footer #badges-left img{
+    width: 80px;
+    height: 80px;
+}
+
+footer #contact-us button {
+    width: 300px;
+    height: 56px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 200%;
+    background-color: #ee7669;
+    border: none;
+    color: #333333;
+}
+
+.copyright {
+    color: white;
+    font-size: 8pt;
+    padding-top: 5px;
+    margin: 0 0 0 0;
+    display: none;
+}
+
+footer #contact-us .copyright {
+    display: block;
+    
+}
+
+ footer #contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+} 
+
+footer #badges-right {
+    display: flex;
+    width: 280px;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+footer #badges-right img{
+    height: 60px;
+}
+
+
+
+/* MAIN */
+main {
+    display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 107px 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "heading heading"
+    "sidepic content";
+}
+
+main header { grid-area: heading; }
+
+.sidepic { grid-area: sidepic; }
+
+.content { grid-area: content; }
+
+
+main header {
+    box-shadow: none;
+    background-color: #0066a6;
+    z-index: -1;
+    
+}
+
+main header h1 {
+    margin: 0 110px;
+    font-size: 72px;
+    color: white;
+}
+main section {
+    margin: 50px 110px;
+}
+
+main .sidepic img {
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .content {
+    overflow-y: scroll;
+}
+
+
+main .content form #donation-amounts {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main .content form #donation-amounts > div {
+    flex: 1;
+  padding: 0.5rem;
+}
+
+main .content form #donation-amounts > div input[type="radio"] {
+    display: none;
+    /* &:not(:disabled) ~ label {
+      cursor: pointer;
+    }
+    &:disabled ~ label {
+      color: hsla(150, 5%, 75%, 1);
+      border-color: hsla(150, 5%, 75%, 1);
+      box-shadow: none;
+      cursor: not-allowed;
+    } */
+  }
+
+main .content form #donation-amounts > div:last-of-type input[type="radio"],  main .content form #donation-amounts > div:last-of-type h3{
+    display: inline;
+    color: gray;
+    font-size: 20pt;
+}
+
+main .content form #donation-amounts > div:last-of-type input[type="radio"]:checked + h3 {
+    color: black;
+}
+
+
+main .content form #donation-amounts > div label {
+    height: 100%;
+    display: block;
+    background: #ecf7f6;
+    /* border: 2px solid hsla(150, 75%, 50%, 1); */
+    border-radius: 10px;
+    /* padding: 1rem; */
+    margin-bottom: 1rem;
+    /* margin: 1rem; */
+    text-align: center;
+    box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+    position: relative;
+    width: 274px;
+}
+
+main .content form #donation-amounts > div label img {
+    overflow: hidden;
+    width: 274px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+
+}
+
+main .content form #donation-amounts > div label div{
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 140px;
+    left: 86px;
+    
+}
+
+main .content form #donation-amounts > div label div h3 {
+    /* background-color: #e5e5e5;
+    border-radius: 50%;
+    width: 92px;
+    padding: 15px 5px; */
+    text-align: center;
+    color: #333333;
+    font-size: 48px;
+    /* display: block;
+    margin: auto auto; */
+    width: 100%;
+    height: 100%;
+    /* vertical-align: middle; */
+    position: absolute;
+    top: -35%;
+    left: 0;
+    /* background-color: #0066a6; */
+    
+    
+
+}
+
+main .content form #donation-amounts > div label p {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 0;
+    font-size: 20px;
+
+}
+
+
+main .content form #donation-amounts > div input[type="radio"]:checked + label div {
+    background-color: #ee7669;
+  }
+
+main .content form #donation-amounts input[type="number"] {
+    width: 500px;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+
+main .content form .toggle input[type="radio"] {
+    display: none;
+}
+
+main .content form .toggle label {
+    display: block;
+    font-size: 20px;
+    background-color: #ecf7f6;
+    margin: auto 0;
+    padding: 5px 10px;
+    width: 200px;
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 5px lightgray;
+}
+
+main .content form .toggle {
+    display: flex;
+    
+}
+
+main .content form .toggle input[type="radio"]:checked + label {
+    background-color: #0066a6;
+    color: white;
+}
+
+
+main .content a, 
+main .content #payment input[type=submit] {
+    display: block;
+    width: 300px;
+    height: 56px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 200%;
+    background-color: #ee7669;
+    border: none;
+    color: #333333;
+    margin: 30px 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+main .content > img {
+    display: block;
+    margin: 0 auto;
+}
+
+main .content > #second {
+    transform:scaleX(-1);
+}
+
+main .content #payment h2 {
+    font-size: 42px;
+    margin-top: 0;
+}
+
+main .content #payment h2:last-of-type {
+    font-size: 42px;
+    margin-top: 20px;
+}
+
+main .content #payment h3 {
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+}
+
+main .content #payment input {
+    font-size: 24px;
+    /* margin-left: 10px; */
+}
+
+main .content #payment #names {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+main .content #payment #names .item:first-of-type {
+    margin-right: 100px;
+}
+
+main .content #payment input[type=email] {
+    width: 99%;
+}
+
+main .content #payment input[type=text] {
+    display: block;
+    width: 100%;
+    /* margin-right: 100px; */
+}
+
+main #thanks {
+    text-align: center;
+
+}
+
+main #thanks h2 {
+    font-size: 90px;
+    margin: 10px;
+}
+
+main #thanks h3 {
+    font-size: 60px;
+    margin: 10px;
+}
+
+main #thanks p {
+    font-size: 30px;
+    margin: 10px;
+}
+
+main #thanks a {
+    display: block;
+    margin: 40px auto;
+}
+
+
+/* When the screen becomes phone sized, we add an extra grid area (auto sizing) 
+to hold the navigation menu that appeasr when you click on the menu button */
+@media screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 140px auto auto 250px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header"
+            "nav"
+            "body"
+            "footer";
+    }
+
+    main {
+        display: block;
+    }
+    
+    header nav .desktop {
+        display: none;
+    }
+
+    header nav .phone {
+        display: block;
+        font-size: 20pt;
+        color: #0066a6;
+    }
+
+    header nav #menu {
+        order: -1;
+        border: none;
+        background-color:transparent;
+    }
+
+    header nav #menu:hover #dropdown-content {
+        display: block;
+    }
+
+    header #desktop {
+        height: 140px;
+        width: auto;
+    }
+
+    header nav img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    
+
+    .copyright {
+        display: block;
+        margin-top: -10px;
+        text-align: center;
+        /* background-color: aqua; */
+
+    }
+
+    footer #contact-us .copyright {
+        display: none;
+    }
+
+    footer #contact-us {
+        order: -2;
+    }
+
+    footer #badges-left, footer #badges-right {
+        padding: 0;
+    }
+
+    footer #badges-right img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer #badges-right {
+        width: 40vw;
+        /* background-color: aquamarine; */
+    }
+
+    footer #badges-left{
+        padding: 5px 0;
+        width: 70vw;
+        /* background-color: azure; */
+    }
+
+    main .sidepic {
+        display: none;
+    }
+
+    main section {
+        margin: 30px 20px;
+        margin-bottom: 10px;
+    }
+
+    main header h1 {
+        margin: 0 20px;
+        font-size: 64px;
+        padding: 20px 0;
+    }
+
+    main .content form #donation-amounts > div label img {
+        display: none;
+    }
+
+    main .content form #donation-amounts div {
+        /* display: none; */
+        /* transform: translate(15%, 0); */
+    }
+
+    main .content form #donation-amounts > div label {
+        /* text-align: right; */
+        /* margin-right: 100px; */
+        height: 90px;
+        width: calc(80vw-40px);
+        transform: translate(40px, 0);
+        }
+    
+    main .content form #donation-amounts > div label div h3 {
+        font-size: 36px;
+        top: -30%;
+    }
+
+    main .content form #donation-amounts > div label div {
+        top: 5px;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        transform: translate(-40px, 0);
+        
+    }
+
+    main .content form #donation-amounts > div label p {
+        /* display: block; */
+        /* margin: auto auto; */
+        /* display: inline; */
+        margin: 0 0;
+        font-size: 24px;
+        /* text-align: right; */
+        position: absolute;
+        right: 10px;
+        top: 30px;
+    }
+
+    main .content form #donation-amounts input[type="number"] {
+        width: 80vw;
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+
+    main .content > img {
+        width: 80vw;
+    }
+
+    main .content #payment input[type=text], main .content #payment input[type=email], main .content #payment input[type=number] {
+        width: 80vw;
+    }
+
+    main #thanks h2 {
+        font-size: 84px;
+    }
+    main #thanks h3 {
+        font-size: 40px;
+    }
+
+    main #thanks p {
+        font-size: 24px;
+    }
+}

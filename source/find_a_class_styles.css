@@ -1,0 +1,621 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 140px auto 110px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header"
+        "body"
+        "footer";
+}
+
+
+
+html, body , .container {
+    height: 100%;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* HEADER */
+
+header { 
+    grid-area: header;
+    width: 100vw; 
+    box-shadow: 0px 3px 3px lightgrey;
+}
+#logo {
+    height: 100px;
+}
+
+header nav .desktop {
+    font-family: 'Oswald', sans-serif;
+    color: #0066a6;
+    display: inline;
+    font-size: 25px;
+}
+
+header #desktop a:link, 
+header #desktop a:visited, 
+header #desktop a:hover, 
+header #desktop a:active, 
+#dropdown-content a:link, 
+#dropdown-content a:visited, 
+#dropdown-content a:hover, 
+#dropdown-content a:active{
+    text-decoration: none;
+}
+
+header #desktop a:hover p, 
+#dropdown-content a:hover p {
+    color: #333333;
+}
+
+/* Makes the cursor the not alowed symbol on the dead menu items */
+header #desktop > p {
+    cursor:not-allowed;
+}
+
+header nav .phone {
+    display: none;
+}
+
+header #desktop {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    height: 140px;
+}
+
+#dropdown-content {
+    grid-area: nav;
+    display: none;
+    overflow: scroll;
+    flex-direction: column;
+    /* height: calc(100% -250px); */
+    height: 100%;
+        /* Calculates the height of the screen - the header height */
+}
+
+#dropdown-content #about-options {
+    display: none;
+    flex-direction: column;
+}
+
+#dropdown-content #programmes-options {
+    display: none;
+    flex-direction: column;
+}
+
+
+
+#dropdown-content button {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    display: block;
+}
+
+#dropdown-content p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #0066a6;
+    border-bottom: solid 2px #e5e5e5;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-top: 15px;
+    z-index: 2;
+}
+
+#dropdown-content #about-options p , 
+#dropdown-content #programmes-options p {
+    margin-left: 50px;
+}
+/* #dropdown-content p:hover {
+    background-color: #e5e5e5;
+} */
+
+/* MAIN BODY */
+main { 
+    grid-area: body; 
+    width: 100vw;
+    display: block;
+    
+}
+
+
+/* FOOTER */
+footer { 
+    grid-area: footer;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+ }
+
+ footer > div {
+    display: inline;
+ }
+
+
+footer #badges-left {
+    display: flex;
+    width: 290px;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+footer #badges-left img{
+    width: 80px;
+    height: 80px;
+}
+
+footer #contact-us button {
+    width: 300px;
+    height: 56px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 200%;
+    background-color: #ee7669;
+    border: none;
+    color: #333333;
+}
+
+.copyright {
+    color: white;
+    font-size: 8pt;
+    padding-top: 5px;
+    margin: 0 0 0 0;
+    display: none;
+}
+
+footer #contact-us .copyright {
+    display: block;
+    
+}
+
+ footer #contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+} 
+
+footer #badges-right {
+    display: flex;
+    width: 280px;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+footer #badges-right img{
+    height: 60px;
+}
+
+
+
+/* MAIN */
+
+main header {
+    box-shadow: none;
+    background-color: #0066a6;
+    z-index: -1;
+    
+}
+
+main header h1 {
+    margin: 0 110px;
+    font-size: 72px;
+    color: white;
+}
+main section {
+    margin: 50px 110px;
+}
+
+main #form-map {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+main #form-map h2{
+    font-size: 32px;
+    font-family: 'Heebo', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+main #form-map input[type=text] {
+    /* width: 207px;
+    height: 50px; */
+    font-size: 24px;
+}
+
+main #form-map label {
+    font-size: 24px;
+}
+
+main #form-map input[type=submit] {
+    width: 270px;
+    height: 71px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    background-color: #ee7669;
+    border: none;
+    color: #333333;
+}
+
+main #results .row {
+    border-bottom: 1px solid #333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main #results .row h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #333333;
+
+}
+main #results .row p {
+    margin-top: 5px;
+    font-size: 20px;
+    
+}
+
+main #results .row >a {
+    font-size: 30px;
+    color: #0066a6;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+main #results .row .programmes {
+    display: flex;
+    width: 650px;
+    justify-content: right;
+}
+
+
+main #results .row .programmes img {
+    width: 125px;
+    height: 125px;
+    margin: 0 10px;
+}
+
+main #location-name-map {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main #location-name-map h2{
+    font-size: 48px;
+    margin-top: 0;
+}
+
+main #location-name-map p{
+    font-size: 24px;
+}
+
+main #location-name-map #programmes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 260px;
+}
+
+main #location-name-map #programmes img{
+    width: 110px;
+    height: 110px;
+    padding: 10px;
+}
+
+main #right-col >a {
+    display: none;
+}
+
+
+main #times {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main #times button {
+    width: 470px;
+    height: fit-content;;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    background-color: #ee7669;
+    border: none;
+    color: #333333;
+}
+
+main #right-col button {
+    width: 90vw;
+    height: fit-content;
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    background-color: #ee7669;
+    border: none;
+    color: #333333;
+    margin: 20px 0;
+}
+
+main #times p, main #times li {
+    font-size: 18px;
+    width: 708px;
+}
+
+main #contact-form h2{
+    font-size: 32px;
+    /* font-family: 'Heebo', sans-serif; */
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+main #contact-form h3{
+    font-family: 'Heebo', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+main #contact-form input[type=text] {
+    /* width: 207px;
+    height: 50px; */
+    font-size: 18px;
+}
+
+main #contact-form label {
+    font-size: 18px;
+}
+
+main #contact-form input[type=submit] {
+    width: 270px;
+    height: 71px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    background-color: #ee7669;
+    border: none;
+    color: #333333;
+}
+
+main #contact-form #names {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+main #contact-form #names .item:first-of-type {
+    margin-right: 100px;
+}
+
+main #contact-form .item {
+    width: 100%;
+    /* overflow: hidden; */
+    /* margin-right: 100px; */
+}
+
+
+main #contact-form input[type=text], main #contact-form input[type=email], main #contact-form textarea {
+    width: 100%;
+    display: block;
+    
+    
+}
+
+main #contact-form input[type=text], main #contact-form input[type=email], main #contact-form input[type=tel] {
+    font-size: 18px;
+    padding: 5px;
+}
+
+main #contact-form form img {
+    height: 100px;
+}
+
+
+
+/* When the screen becomes phone sized, we add an extra grid area (auto sizing) 
+to hold the navigation menu that appeasr when you click on the menu button */
+@media screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 140px auto auto 250px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header"
+            "nav"
+            "body"
+            "footer";
+    }
+    
+    header nav .desktop {
+        display: none;
+    }
+
+    header nav .phone {
+        display: block;
+        font-size: 20pt;
+        color: #0066a6;
+    }
+
+    header nav #menu {
+        order: -1;
+        border: none;
+        background-color:transparent;
+    }
+
+    header nav #menu:hover #dropdown-content {
+        display: block;
+    }
+
+    header #desktop {
+        height: 140px;
+        width: auto;
+    }
+
+    header nav img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    
+
+    .copyright {
+        display: block;
+        margin-top: -10px;
+        text-align: center;
+        /* background-color: aqua; */
+
+    }
+
+    footer #contact-us .copyright {
+        display: none;
+    }
+
+    footer #contact-us {
+        order: -2;
+    }
+
+    footer #badges-left, footer #badges-right {
+        padding: 0;
+    }
+
+    footer #badges-right img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer #badges-right {
+        width: 40vw;
+        /* background-color: aquamarine; */
+    }
+
+    footer #badges-left{
+        padding: 5px 0;
+        width: 70vw;
+        /* background-color: azure; */
+    }
+
+    main section {
+        margin: 30px 20px;
+        margin-bottom: 10px;
+    }
+
+    main header h1 {
+        margin: 0 20px;
+        font-size: 64px;
+        padding: 20px 0;
+    }
+
+    main #form-map #map {
+        display: none;
+    }
+
+    main #form-map input[type=submit], main #contact-form input[type=submit]  {
+        height: 52px;
+        width: 165px;
+        font-size: 32px;
+    }
+
+    main #results .row .programmes img {
+        width: 75px;
+        height: 75px;
+        margin: 0 4px;
+    }
+
+    main #results .row .programmes {
+        width: 324px;
+        justify-content: left;
+        align-self: start;
+    }
+
+    main #results .row, main #location-name-map {
+        flex-direction: column;
+    }
+
+    main #results .row >a {
+        align-self: end;
+        margin: 20px 10px;
+    }
+
+    main #results .row > #info {
+        align-self: start;
+    }
+
+    main #location-name-map #programmes img {
+        height: 77px;
+        width: 77px;
+        padding: 0 3.2px;
+    }
+
+    main #location-name-map #programmes {
+        width: 100%;
+    }
+
+    main #location-name-map #right-col {
+        margin: 20px 0;;
+    }
+
+    main #times p, main #times li, main #location-name-map #right-col #map {
+        width: 90vw !important; 
+        /* the important tag should allow the stylesheet in replace an inline style */
+    }
+
+    main #times {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #times p, main #times li {
+        margin-left: 30px;
+    }
+
+    main #times button {
+        display: none;
+    }
+
+    main #right-col >a {
+        display: block;
+    }
+
+    main #contact-form #names {
+        flex-direction: column;
+    }
+
+    main #contact-form form {
+        width: 90vw;
+    }
+
+    main #contact-form input[type=text], main #contact-form input[type=email], main #contact-form textarea {
+        width: 90vw;
+        padding: 5px 0px;
+        font-family: 'Heebo', sans-serif;
+    }
+
+    main #contact-form input[type=submit] {
+        display: block;
+        margin: 0 auto;
+    }
+}

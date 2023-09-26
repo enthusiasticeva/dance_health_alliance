@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Dance Health Alliance - Empowering people to find their freedom through movement.">
+        <meta name="author" content="Eva Jessurun">
+
+
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/flickity.css">
+
+        <script src="https://kit.fontawesome.com/f1cfdd058c.js" crossorigin="anonymous"></script>
+
+
+        <title>HOME - Dance Health Alliance</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    </head>
+    <body>
+        <div class="container">
+        
+            <header>
+                <nav id="desktop">
+                    <a href="/index.html"><img id="logo" src="images/DHA-Logo-Retina.png" alt="The Dance Health Alliance Logo (can be clicked to return to the home page)"></a>
+                    <p class="desktop">About <i class="fas fa-chevron-down fa-xs"></i>  </p>
+                    <p class="desktop">Programmes</p>
+                    <a href="/find_a_class.html"><p class="desktop">Find A Class</p></a>
+                    <a href="/donate_1.html"><p class="desktop">Donate</p></a>
+                    <p class="desktop">Shop</p>
+                    <p class="desktop">Staff Training</p>
+                    <p class="desktop">Account</p>
+                    <p class="desktop"><i class="fas fa-shopping-cart"></i><i class="fas fa-chevron-down fa-xs"></i></p>
+
+                    
+                    <button id="menu" class="phone" onclick="toggleMenu('dropdown-content')"> 
+                        <p class="phone">
+                            <i class="fas fa-bars"></i>
+                        </p>
+                    </button>
+                    <p class="phone" id="cart"><i class="fas fa-shopping-cart"></i></p>
+
+                    
+
+                </nav>
+                
+                
+                <script>
+                    
+                </script>
+                
+            </header>
+
+            <nav id="dropdown-content">
+                <button onclick="toggleMenu('about-options')">
+                    <p>
+                        About <i class="fas fa-chevron-down fa-xs"></i>  
+                    </p>
+                </button>
+                    <nav id="about-options">
+                        <p>Who we are</p>
+                        <p>Our Staff</p>
+                        <p>Impact</p>
+                        <p>History</p>
+                        <p>Partners</p>
+                    </nav>
+                    <button onclick="toggleMenu('programmes-options')">
+                        <p>
+                            Programmes <i class="fas fa-chevron-down fa-xs"></i>  
+                        </p>
+                    </button>
+                    <nav id="programmes-options">
+                        <p>Programmes Overview</p>
+                        <p>Stretchwise</p>
+                        <p>Dancewell</p>
+                        <p>DanceWise</p>
+                        <p>DanceMoves</p>
+                    </nav>
+                <a href="/find_a_class.html"><p class="desktop">Find A Class</p></a>
+                <a href="/donate_1.html"><p class="desktop">Donate</p></a>
+                <p>Shop</p>
+                <p>Staff Training</p>
+                <p>Account</p>
+            </nav>
+            <main id="main" style="display: block;">
+                <section id="welcome">
+                    <img src="/images/Dementia-and-Dance-1.jpg" alt="dancers sitting in a circle of chairs wabing their hands in the air">
+                    <div> 
+                        
+                        <h1>Welcome to the <br> <em> DANCE HEALTH ALLIANCE</em></h1>
+                        <span></span>
+                    </div>
+                </section>
+                <section id="classes-section">
+                    <div id="classes-row">
+                        <div class="classes-col">
+                            <img src="/images/dancewise.png" alt="dancewise logo">
+                            <h2>DanceWise</h2>
+                            <p>A programme designed for aged care facilities to promote memory stimulation, creativity, physical activity and social interaction for residents</p>
+                        </div> 
+
+                        <div class="classes-col">
+                            <img src="/images/dancemoves.png" alt="dancemoves logo">
+                            <h2>DanceMoves</h2>
+                            <p>Interactive dance classes which are targeting at exercising the body and brain for seniors wishing the maintain their wellbeing in a safe fun environment.</p>
+                        </div>
+
+                        <div class="classes-col">
+                            <img src="/images/dancewell.png" alt="dancewell logo">
+                            <h2>DanceWell</h2>
+                            <p>Accessible dance classes for people living with movement restrictions ie. Multiple Sclerosis, Parkinson’s, Arthritis, and neurological challenges.</p>
+                        </div>
+
+                        <div class="classes-col">
+                            <img src="/images/stretchwise.png" alt="stretchwise logo">
+                            <h2>StretchWise</h2>
+                            <p>Lockdown Recovery Programme Specially designed for those living in Care Homes or assisted living.</p>
+                        </div>
+                    </div>
+
+                    <button>FIND A CLASS</button>
+                </section>
+
+                <section id="testemonials">
+                    <div class="main-gallery js-flickity"
+                    data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": true, "autoPlay": true}'>
+                        <div class="gallery-cell">
+                            <img src="/images/Testimonial-1.jpg" alt="A woman sitting on a chair, reaching over to the side to stretch her back">
+                            <p>““When I was diagnosed with MS I thought that my dancing days would be over and that I would not be able to dance again. But then I found Dance Health Alliance. It has given me so much happiness as it allows me to dance again.” <br><strong>- Gail</strong></p>
+                        </div>
+
+                        <div class="gallery-cell">
+                            <img src="/images/Testimonial-2.jpg" alt="A smiling woman sitting in a chair reaching to the side">
+                            <p>“The Dance Health Alliance class makes me feel like an elegant dancer!”<br><strong>- Happy Dancer</strong></p>
+                        </div>
+
+                        <div class="gallery-cell">
+                            <img src="/images/Testimonial-3.jpg" alt="A group of smiling ßpeople sitting on chairs reaching forward">
+                            <p>“The Dance Health Alliance is a wonderfully supportive, health-giving and inspirational environment created by Gwen as she so superbly leads and encourages us through various routines.” <br><strong>- Dancer with MS</strong></p>
+                        </div>
+                        
+                      </div>
+                </section>
+
+                <section class="image-banner">
+                    <img src="/images/Hands-up-in-the-Air.jpg" alt="A groupd of elderly people sitting in a circle on chairs reaching upwards">
+                </section>
+
+                <section id="covid-programmes">
+                    <h2>
+                        <img src="/images/COVID-Safe.png" alt="covid safe icon"> <br>
+                        COVID SAFE <br> PROGRAMMES
+                    </h2>
+                    <div class="shop-item">
+                        <img src="/images/seated.jpg" alt="One elderly woman and 4 younger women (DHA teachers) sitting together smiling">
+                        <h3>DanceWell at Home – 8 classes every month.</h3>
+                        <p>$55.00</p>
+                    </div>
+
+                    <div class="shop-item">
+                        <img src="/images/Home-Dementia-Programme.jpg" alt="A teacher and an eldrly woman laugh as they dance">
+                        <h3>DanceWise at Home Dementia Specific Programme.</h3>
+                        <p>$45.00</p>
+                    </div>
+
+                </section>
+
+                <section id="ambassador">
+                    <figure>
+                        <img src="/images/Toni-Lamond-400x590.jpg" alt="Toni Lamon smiling. She has short curly white hair, a black top and a blue necklace">
+                        <h2>Toni Lamond</h2>
+                        <figcaption>Dance Health Alliance Ambassador</figcaption>
+                    </figure>
+
+                    <div>
+                        <p>The Dance Health Alliance is thrilled to introduce our ambassador, Toni Lamond AM. Toni is an Australian icon, with a professional career in Cabaret, Stage, and Screen as a “Triple Threat” spanning over 70 years.</p>
+                        <p>Toni was born into a vaudevillian family, with whom she appeared on stages such as the Tivoli Stage from the age of 10. She starred in the Australian productions of Oliver!, The Pajama Game, Gypsy, 42nd Street, Pirates of Penzance, Follies, High Society and My Fair Lady, to name a few. Toni also appeared on stages throughout the UK and the USA in shows such as Annie and Cabaret. Toni has also appeared on screen in shows such as In Melbourne Tonight, Number 96, and on the BBC.</p>
+                        <p>Toni is an accomplished author of three autobiographies, and the winner of many awards including two Logies, the Centenary Medal, and the Order of Australia (AM).</p>
+                        <p>Toni is proudly the daughter of Stella Lamond, sister of Helen Reddy and mother to Tony Sheldon.</p>
+                        <p>Toni is now passionate about sharing not only the joy and freedom of the performing arts but the physical and mental benefits too. She recently participated in a DanceWise class, and was delighted to find she had completed over 750 steps in just 30 minutes without moving from her chair! Thank you SANA for the technology that recorded this amazing result. What a fantastic achievement, particularly as Toni now finds a challenge in moving independently of an aid.</p>
+                        <p>Toni’s personal motto is a quote from Winston Churchill, “never, never, never give up” – we couldn’t agree more. We are honoured to have Toni Lamond endorse our programs, share our ethos, and act as our Ambassador.</p>
+                    </div>
+
+                </section>
+
+                <section class="image-banner">
+                    <img src="/images/Our-Philosophy.jpg" alt="A group of women sitting on chairs stretching forward ">
+                </section>
+
+            </main>
+            <footer>
+                <div id="badges-left">
+                    <img src="images/blue-thumbs-up-hi.png" alt="blue thumbs up symbol">
+                    <img src="images/registered-charity.png" alt="registered charity icon">
+                    <img src="images/COVID-Safe.png" alt="covid safe icon">
+                    
+                </div>
+
+                <div id="contact-us">
+                    <button onclick="displaycontact()">
+                        CONTACT US
+                    </button>
+                    
+                    
+                    <p class = "copyright">Copyright 2019 | Dance Health Alliance<sup><i class="fas fa-trademark fa-xs"></i></sup>  Australia | All Rights Reserved</p>
+                    
+
+                </div>
+
+                
+
+                <div id="badges-right">
+                    <a href="https://www.facebook.com/DanceHealthAlliance/"><img src="images/facebook.png" alt="facebook icon"></a>
+                    <a href="https://www.instagram.com/dancehealthalliance/"><img src="images/instagram.png" alt="instagram icon"></a>
+                    <a href="https://twitter.com/DHA_Aust"><img src="images/twitter.png" alt="twitter icon"></a>
+                    <a href="https://www.youtube.com/channel/UCyrOOlFiYXrdKIMZ2DTViKQ"><img src="images/youtube.png" alt="youtube icon"></a>
+                    
+                </div>
+
+                <p class = "copyright">Copyright 2019 | Dance Health Alliance<sup><i class="fas fa-trademark fa-xs"></i></sup>  Australia |<br> All Rights Reserved</p>
+
+
+            </footer>
+            
+        </div>
+
+
+        
+        <script src="/flickity.pkgd.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

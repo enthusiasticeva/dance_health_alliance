@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Dance Health Alliance - Empowering people to find their freedom through movement.">
+        <meta name="author" content="Eva Jessurun">
+
+
+        <link href="/donate_styles.css" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/f1cfdd058c.js" crossorigin="anonymous"></script>
+
+
+        <title>Donate - Dance Health Alliance</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    </head>
+    <body>
+        <div class="container">
+        
+            <header>
+                <nav id="desktop">
+                    <a href="/index.html"><img id="logo" src="images/DHA-Logo-Retina.png" alt="The Dance Health Alliance Logo (can be clicked to return to the home page)"></a>
+                    <p class="desktop">About <i class="fas fa-chevron-down fa-xs"></i>  </p>
+                    <p class="desktop">Programmes</p>
+                    <a href="/find_a_class.html"><p class="desktop">Find A Class</p></a>
+                    <a href="/donate_1.html"><p class="desktop">Donate</p></a>
+                    <p class="desktop">Shop</p>
+                    <p class="desktop">Staff Training</p>
+                    <p class="desktop">Account</p>
+                    <p class="desktop"><i class="fas fa-shopping-cart"></i><i class="fas fa-chevron-down fa-xs"></i></p>
+
+                    
+                    <button id="menu" class="phone" onclick="toggleMenu('dropdown-content')"> 
+                        <p class="phone">
+                            <i class="fas fa-bars"></i>
+                        </p>
+                    </button>
+                    <p class="phone" id="cart"><i class="fas fa-shopping-cart"></i></p>
+
+                    
+
+                </nav>
+                
+                
+                <script>
+                    
+                </script>
+                
+            </header>
+
+            <nav id="dropdown-content">
+                <button onclick="toggleMenu('about-options')">
+                    <p>
+                        About <i class="fas fa-chevron-down fa-xs"></i>  
+                    </p>
+                </button>
+                    <nav id="about-options">
+                        <p>Who we are</p>
+                        <p>Our Staff</p>
+                        <p>Impact</p>
+                        <p>History</p>
+                        <p>Partners</p>
+                    </nav>
+                    <button onclick="toggleMenu('programmes-options')">
+                        <p>
+                            Programmes <i class="fas fa-chevron-down fa-xs"></i>  
+                        </p>
+                    </button>
+                    <nav id="programmes-options">
+                        <p>Programmes Overview</p>
+                        <p>Stretchwise</p>
+                        <p>Dancewell</p>
+                        <p>DanceWise</p>
+                        <p>DanceMoves</p>
+                    </nav>
+                <a href="/find_a_class.html"><p class="desktop">Find A Class</p></a>
+                <a href="/donate_1.html"><p class="desktop">Donate</p></a>
+                <p>Shop</p>
+                <p>Staff Training</p>
+                <p>Account</p>
+            </nav>
+            <main id="main" >
+                <header>
+                    <h1>DONATE</h1>
+                </header>
+                <div class="sidepic">
+                    <img src="/images/donate_sidebar.png" alt="two elderly women seated, smiling whilst doing hand actions ">
+                </div>
+                <section class="content">
+                    <p>
+                        Let’s dance together and change the lives of people who want to groove!
+                    </p>
+                    <p>
+                        One in every five Australians is diagnosed with a condition that impairs their control over their bodies. This year we are asking for your support to help us get individuals across Australia experiencing the freedom of movement!
+                    </p>
+                    <p>
+                        The Dance Health Alliance is a Not for Profit Organisation facilitating therapeutic dance classes for people living with chronic cognitive and movement challenges. With your help, we can hire spaces, train teachers and offer subsidised classes to people in desperate need of physical, psychosocial and cognitive wellness.
+                    </p>
+
+                    <form action="">
+                        <!-- https://www.sliderrevolution.com/resources/styling-radio-buttons/ -->
+                        <!-- https://codepen.io/adamstuartclark/pen/pbYVYR -->
+                        <h2>Choose An Amount</h2>
+                        <div id="donation-amounts">
+                            
+                            <div>
+                                
+                                <input type="radio" id="control_01" name="select" value="1" checked>
+                                <label for="control_01">
+                                    <img src="/images/25dollars.jpg" alt="One elderly woman and 4 younger women (DHA teachers) sitting together smiling">
+                                    <div>
+                                        <h3>$25</h3>
+                                    </div>
+                                  
+                                  <p>Pays for 2 lessons</p>
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" id="control_02" name="select" value="2">
+                                <label for="control_02">
+                                    <img src="/images/50dollars.jpg" alt="A row of people waving their arms sitting down">
+                                    <div>
+                                        <h3>$50</h3>
+                                    </div>
+                                  <p>Pays for 4 lessons</p>
+                                </label>
+                              </div>
+                              <div>
+                                <input type="radio" id="control_03" name="select" value="3">
+                                <label for="control_03">
+                                    <img src="/images/100dollars.jpg" alt="A circle of chairs with elderly people seated, raising their arms">
+                                    <div>
+                                        <h3>$100</h3>
+                                    </div>
+                                  <p>Pays for 8 lessons</p>
+                                </label>
+                              </div>
+                              <div>
+                                
+                                <input type="radio" id="control_04" name="select" value="3"><h3>Choose A Different Amount</h3> <br>
+                                <input type="number" name="other_amount" >
+                              </div>
+                        </div>
+
+                        <h2>Make this Donation</h2>
+
+                        <div class="toggle">
+                            <input type="radio" name="frequency" value="once" id="once" checked="checked" />
+                            <label for="once">Once</label>
+                            <input type="radio" name="frequency" value="Weekly" id="Weekly" />
+                            <label for="Weekly">Weekly</label>
+
+                            <input type="radio" name="frequency" value="Monthly" id="Monthly" />
+                            <label for="Monthly">Monthly</label>
+                        </div>
+
+                        <a href="/donate_2.html">NEXT</a>
+                    </form>
+
+                    <img src="/images/progress.png" alt="progress bar (part 1 of 2)">
+                </section>
+
+            </main>
+            <footer>
+                <div id="badges-left">
+                    <img src="images/blue-thumbs-up-hi.png" alt="blue thumbs up symbol">
+                    <img src="images/registered-charity.png" alt="registered charity icon">
+                    <img src="images/COVID-Safe.png" alt="covid safe icon">
+                    
+                </div>
+
+                <div id="contact-us">
+                    <button>
+                        CONTACT US
+                    </button>
+                    <p class = "copyright">Copyright 2019 | Dance Health Alliance<sup><i class="fas fa-trademark fa-xs"></i></sup>  Australia | All Rights Reserved</p>
+
+                </div>
+
+                <div id="badges-right">
+                    <a href="https://www.facebook.com/DanceHealthAlliance/"><img src="images/facebook.png" alt="facebook icon"></a>
+                    <a href="https://www.instagram.com/dancehealthalliance/"><img src="images/instagram.png" alt="instagram icon"></a>
+                    <a href="https://twitter.com/DHA_Aust"><img src="images/twitter.png" alt="twitter icon"></a>
+                    <a href="https://www.youtube.com/channel/UCyrOOlFiYXrdKIMZ2DTViKQ"><img src="images/youtube.png" alt="youtube icon"></a>
+                    
+                </div>
+
+                <p class = "copyright">Copyright 2019 | Dance Health Alliance<sup><i class="fas fa-trademark fa-xs"></i></sup>  Australia |<br> All Rights Reserved</p>
+
+
+            </footer>
+            
+        </div>
+
+
+        
+
+        <script src="script.js"></script>
+    </body>
+</html>
